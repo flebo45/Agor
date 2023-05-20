@@ -1,0 +1,50 @@
+<?php
+
+class post{
+  private  $postId  = int;
+  private $title = "";
+  private $body = "";
+  private $category = "";
+  private $like = int;
+  private $userId = "";
+  private $commentId = array();
+
+  public function setPostId($postId){
+    $this->postId = $postId;
+  }
+  public function getPostId(){
+    return $this->postId;
+  }
+  public function setTitle($title){
+    $this->title = $title;
+  }
+  public function getTitle(){
+    return $this->title;
+  }
+  public function setBody($body){
+    $this->body = $body;
+  }
+  public function getBody(){
+    return $this->body;
+  }
+  public function setLike($like){
+    $this->like = $like;
+  }
+  public function getLike(){
+    return $this->like;
+
+  }
+  public function setCategory($category){
+    $this->category = $category;
+  }
+  public function getCategory(){
+    return $this->category;
+  }
+  public function setUserId($userId){
+    $this->userId = $userId;
+  }
+  public function getUserId(){
+    return $this->userId;
+  }
+  //manca l array dei commenti sia get che set
+}

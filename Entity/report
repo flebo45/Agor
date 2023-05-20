@@ -1,0 +1,31 @@
+<?php
+
+class report{
+    private $reportId = int ;
+    private $description = "";
+    private $type = enum_exists("violento", "spam");//da definire
+    private $userId = int;
+    private $reportedPost = get_class($_POST) ; 
+    private $reportedComment = get_class($_COMMENT);
+    //da vedere questi due get class
+
+    public function setReportId($reportId){
+        $this->reportId = $reportId;
+    }
+    public function getReportId(){
+        return $this->reportId;
+    }
+    public function setDescription($description){
+        $this->description= $description;
+    }
+    public function getDescription(){
+        return $this->description;
+    }
+    public function setUserId($userId){
+        $this->userId=$userId;
+    }
+    public function getUserId(){
+        return $this->userId;
+    }
+  // da fare get e setter di get class di post e comment 
+}
