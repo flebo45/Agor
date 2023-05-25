@@ -1,0 +1,39 @@
+<?php
+
+class Image{
+    private $imageId;
+    private $imageFile;
+    private $postId;
+
+    public function __construct($imageId, $imageFile, $postId){
+        $this->imageId = $imageId;
+        $this->imageFile = $imageFile;
+        $this->postId = $postId;
+    }
+
+    public function setImageId($imageId){
+        $this->imageId = $imageId;
+    }
+
+    public function getImageId(){
+        return $this->imageId;
+    }
+
+    public function setImageFile($imageFile){
+        $this->imageFile = $imageFile;
+    }
+
+    public function getImageFile(){
+        return $this->imageFile;
+    }
+
+    public function setPostId($postId){
+        $this->postId = $postId;
+    }
+
+    public function getPostId(){
+        return $this->postId;
+    }
+
+
+}
