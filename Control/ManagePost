@@ -1,0 +1,25 @@
+<?php
+require_once ("\home\flebo45\Agora\Entity\Post");
+require_once  ("\home\flebo45\Agora\Entity\Image");
+require_once ("\home\flebo45\Agora\Foundation|FPeristentManager");
+class ManagePOst{
+
+    public function creaPost($postId,$title,$body,$category,$like,$userId,$creationTime,$comments) {
+        $post = new Post($postId,$title,$body,$category,$like,$userId,$creationTime,$comments);
+        return ($post);
+    }
+    public function loadPost(Post $post){
+        //richiama il pm 
+    }
+    public function loadImage($postId,$nomefile){
+
+        //bisogna carica le immagini con questo metodo dobbiamo capire come si fa
+    }
+    public function modifyPost($postId){
+        //prende da sessione i dati del post e li carica nella form come si fa?
+        
+        // autocompila la form con i dati presi da sessione 
+
+        //setta i nuovi dati sul post e li carica sul db
+    }
+}

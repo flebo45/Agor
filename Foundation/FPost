@@ -1,0 +1,9 @@
+<?php
+require_once ("\home\flebo45\Agora\Entity\Post");
+
+class Fpost{
+
+     public function storePost(Post $post){
+        //richaiama fdb e fa lo store nel db
+    }
+}
