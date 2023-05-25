@@ -1,5 +1,0 @@
-<?php
-
-class registered_user extends User{
-
-}
