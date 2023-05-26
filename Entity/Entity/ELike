@@ -1,0 +1,36 @@
+<?php
+
+class Like{
+
+    private $likeId;
+    private $userId;
+    private $postId;
+
+    public function __construct($likeId, $userId, $postId){
+        $this->likeId = $likeId;
+        $this->userId = $userId;
+        $this->postId = $postId;
+
+    }
+
+    public function setlikeId($likeid){
+        $this->likeId = $likeid;
+    }
+    public function getlikeId(){
+        return $this->likeId;
+    }
+    
+    public function setuserId($userId){
+        $this->userId = $userId;
+    }
+    public function getuserId(){
+        return $this->userId;
+    }
+    
+    public function setpostId($postId){
+        $this->postId = $postId;
+    }
+    public function getpostId(){
+        return $this->postId;
+    }
+}

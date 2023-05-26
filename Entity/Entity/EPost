@@ -1,0 +1,74 @@
+<?php
+
+class Post{
+  private  $postId;
+  private $title;
+  private $body ;
+  private $category ;
+  private $like ;
+  private $userId ;
+  private $comments = array();
+  private $creationTime;
+
+  public function __construct($postId,$title,$body,$category,$like,$userId,$creationTime,$comments){
+    $this->postId = $postId;
+    $this->title = $title;
+    $this->body = $body;
+    $this->category = $category;
+    $this->like = $like;
+    $this->userId = $userId;
+    $this->creationTime;
+    $this->comments = $comments;
+  }
+
+  public function setPostId($postId){
+    $this->postId = $postId;
+  }
+  public function getPostId(){
+    return $this->postId;
+  }
+  public function setTitle($title){
+    $this->title = $title;
+  }
+  public function getTitle(){
+    return $this->title;
+  }
+  public function setBody($body){
+    $this->body = $body;
+  }
+  public function getBody(){
+    return $this->body;
+  }
+  public function setLike($like){
+    $this->like = $like;
+  }
+  public function getLike(){
+    return $this->like;
+
+  }
+  public function setCategory($category){
+    $this->category = $category;
+  }
+  public function getCategory(){
+    return $this->category;
+  }
+  public function setUserId($userId){
+    $this->userId = $userId;
+  }
+  public function getUserId(){
+    return $this->userId;
+  }
+  public function setComments($comments){
+    $this->comments = $comments;
+  }
+  public function getComments(){
+    return $this->comments;
+  }
+  public function addComment(Comment $c){
+    array_push($this->comments, $c);
+  }
+
+  public function addLike(Like $l){
+    array_push($this->like, $l );  
+  }
+}
