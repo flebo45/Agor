@@ -1,6 +1,6 @@
 <?php
 
-class Post{
+class EPost{
   private  $postId;
   private $title;
   private $body ;
@@ -64,11 +64,11 @@ class Post{
   public function getComments(){
     return $this->comments;
   }
-  public function addComment(Comment $c){
+  public function addComment(EComment $c){
     array_push($this->comments, $c);
   }
 
-  public function addLike(Like $l){
+  public function addLike(ELike $l){
     array_push($this->like, $l );  
   }
 }

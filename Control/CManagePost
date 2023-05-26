@@ -1,14 +1,55 @@
 <?php
-require_once ("\home\flebo45\Agora\Entity\Post");
-require_once  ("\home\flebo45\Agora\Entity\Image");
-require_once ("\home\flebo45\Agora\Foundation|FPeristentManager");
-class ManagePOst{
+require_once ("C:/Users/Utente/Desktop/Agor/Agora/Entity/EPost");
+require_once  ("\home\flebo45\Agora\Entity\EImage");
+require_once ("\home\flebo45\Agora\FoundationFPeristentManager");
+class CManagePOst{
 
-    public function creaPost($postId,$title,$body,$category,$like,$userId,$creationTime,$comments) {
-        $post = new Post($postId,$title,$body,$category,$like,$userId,$creationTime,$comments);
-        return ($post);
+    public function viewForm(){
+        
+        //controllare che l'utente sia loggato e call alla view che mostra la form
+        $identified = false;
+        if (isset ($_SESSION["user"])){
+            $identified = true;
+             //mostra view
+        }
+        else{
+            return("loggati");
+        
+        }
     }
-    public function loadPost(Post $post){
+
+    public function newSketch() {
+        //controllo sessione 
+        //prendere dati view e metterli in sessione
+        $nome = "fulvio";
+        $titolo = "titolo";
+        $body = "body";
+        $category = "category";
+        $postId = "postid"; // tramite db da un numero univoco
+        $userid = "userid";
+        $time = strtotime("now");
+
+        /*  
+            $userid = $_SESSION["userid"]
+            $nome = $_SESSION["user"]
+            $titolo = $_SESSION["title"]
+            $body = $_SESSION["body"]
+            $category = $_SESSION["category"]
+        }*/ 
+
+        $post = new EPost($postId,$titolo,$body,$category,null,$userid,$time ,null);
+
+        print $post->getPostId();
+        print $post->getTitle();
+        print $post->getBody();
+        
+
+
+
+
+
+        }
+    public function loadPost(EPost $post){
         //richiama il pm 
     }
     public function loadImage($postId,$nomefile){

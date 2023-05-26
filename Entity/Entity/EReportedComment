@@ -1,9 +1,9 @@
 <?php
 
-class ReportedComment{
+class EReportedComment{
     private $reportId = int ;
     private $description = "";
-    private $type = enum_exists("violento", "spam");//da definire
+    private $type ;//da definire
     private $userId = int;
     private $reportedPost = get_class($_POST) ; 
     private $reportedComment = get_class($_COMMENT);

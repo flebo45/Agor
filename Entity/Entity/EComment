@@ -1,6 +1,6 @@
 <?php
 
- class Comment{
+ class EComment{
     private $commentId; 
     private $body;
     private $userId;

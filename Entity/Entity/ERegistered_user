@@ -1,6 +1,6 @@
 <?php
 
-class Registered_user extends User{
+class Registered_user extends EUser{
     private $userId;
     private $profilePic;
     private $bio;
